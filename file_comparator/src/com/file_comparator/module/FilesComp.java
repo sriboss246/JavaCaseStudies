@@ -25,6 +25,7 @@ class FileCompOpr{
 		System.out.println("Application has initialized");
 	}
 
+
 	public void compareFileList(String sourceDir,String targetDir){
 		
 		File srcDir = new File(sourceDir);
