@@ -2,13 +2,13 @@
 
 
 
-package coreJava;
+package com.utility;
 
-import java.io.File;
+import java.io.*;
+import java.util.Properties;
 
 
-
-public class FB_GarbageCleaner {
+public class GarbageFileNotifier {
 	
 
 public int GCleaner(String path,long threshold_time)
@@ -30,11 +30,13 @@ public int GCleaner(String path,long threshold_time)
 return 0;
 }
 
-public static void main(String...arg){
-	
-	String path="C:\\Users\\B Sridhar\\Documents\\test";
+public static void main(String...arg) throws IOException {
+
+	Properties props= new Properties();
+	props.load(new FileInputStream("//config//garbageCleanerConfig.properties"));
+	String path=props.getProperty("garbageCleaner.dir.path");
 	long thtime=1000*60;
-	FB_GarbageCleaner fbg=new FB_GarbageCleaner();
+	GarbageFileNotifier fbg=new GarbageFileNotifier();
 	fbg.GCleaner(path,thtime);
 	
 	

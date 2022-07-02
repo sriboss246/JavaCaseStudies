@@ -1,4 +1,4 @@
-package com.puzzle;
+package com.utility;
 
 import java.util.HashMap;
 
