@@ -19,12 +19,13 @@ import difflib.*;
 
 
 class FileCompOpr{
-	
+
 	public FileCompOpr(){
 		
 		System.out.println("Application has initialized");
 	}
-		public void compareFileList(String sourceDir,String targetDir){
+
+	public void compareFileList(String sourceDir,String targetDir){
 		
 		File srcDir = new File(sourceDir);
 		File trgDir = new File(targetDir);
